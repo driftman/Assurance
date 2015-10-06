@@ -1,0 +1,18 @@
+services:
+#    bmce_test.example:
+#        class: BMCE\TestBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+
+
+    bmce.dao:
+        class: BMCE\TestBundle\Dao\AssuranceDAOImpl
+        arguments: [@doctrine.orm.default_entity_manager]
+
+    bmce.metier:
+        class: BMCE\TestBundle\Metier\AssuranceMetierImpl
+        arguments: [@bmce.dao]
+
+
+
+
